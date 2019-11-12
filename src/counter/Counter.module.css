@@ -1,0 +1,25 @@
+.filter-active {
+  color: red;
+}
+
+.buttons {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.button {
+    padding: 10px 20px;
+
+}
+
+.counters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    width: 270px;
+    height: 140px;
+}
