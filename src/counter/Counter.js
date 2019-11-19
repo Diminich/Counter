@@ -1,43 +1,21 @@
 import React from 'react';
-import './App.css';
-import Buttons from './Battons/Buttons';
+import style from './Counter.module.css';
 
-class App extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            count: 0,
-        }
-    }
-
-    addClick = () => {
-        if (this.state.count < 5)
-        this.setState({
-            count: this.state.count + 1
-        });
-    };
-
-    addClickReset = () => {
-            this.setState({
-                count: this.state.count = 0
-            });
-        };
+class Counter extends React.Component {
 
     render = (props) => {
-        let classForInc = this.state.count === 5 ? 'filter-active' : '';
-        let disabled = this.state.count === 5;
+        const {isErrorSet, isDataSet , count , maxCount, startCount} = this.props;
+        let classForInc = count === maxCount ? style.filterActive : '';
+        let error = maxCount === startCount ? style.errorActive : '';
+        const statusText = isErrorSet ? 'error' : isDataSet ? count : "set value";
         return (
-            <div>
-
-                <div className={classForInc}>{this.state.count}</div>
-                <div>
-                    <Buttons addClick={this.addClick} addClickReset={this.addClickReset} disabled={disabled} />
-                </div>
+            <div className={`${classForInc} ${style.counters} ${error}`}>
+                {
+                    statusText
+                }
             </div>
         );
     }
 };
 
-export default App;
+export default Counter;

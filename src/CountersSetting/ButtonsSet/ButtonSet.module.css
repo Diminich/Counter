@@ -1,5 +1,11 @@
-.blockCounter {
-    width: 320px;
-    height: 300px;
+.buttons {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
     border: 1px solid;
+}
+
+.button {
+    padding: 10px 20px;
 }

@@ -1,7 +1,3 @@
-.filter-active {
-  color: red;
-}
-
 .block {
   display: flex;
   width: 70%;
@@ -9,9 +5,9 @@
 }
 
 .counter {
-  width: 320px;
+  width: 350px;
   border: 1px solid;
-  height: 300px;
+  height: 320px;
   display: flex;
   align-items: center;
   flex-direction: column;

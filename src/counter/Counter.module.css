@@ -1,5 +1,9 @@
-.filter-active {
+.filterActive {
   color: red;
+}
+
+.errorActive {
+    color: red;
 }
 
 .buttons {

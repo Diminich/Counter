@@ -1,5 +1,29 @@
+.filterActive {
+    border: 1px solid red;
+}
+
 .blockCounter {
-    width: 320px;
-    height: 300px;
     border: 1px solid;
+    width: 270px;
+    height: 140px;
+}
+
+.input {
+    height: 25px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.max {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.start {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

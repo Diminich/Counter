@@ -1,5 +1,14 @@
-.blockCounter {
-    width: 320px;
-    height: 300px;
-    border: 1px solid;
+.filter-active {
+    color: red;
 }
+
+.blockCounter {
+    width: 350px;
+    border: 1px solid;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
