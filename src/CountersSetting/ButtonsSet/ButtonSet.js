@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './ButtonSet.module.css';
+import {connect} from "react-redux";
+import {setDisabledSetAC} from "../../Redux/CounterSetting-Reducer";
 
-class ButtonSet extends React.Component {
+class buttonSet extends React.Component {
 
-    buttonSet = (disabledOnClickSet) => {
-        this.props.setButtonSet(disabledOnClickSet)
+    buttonSet = () => {
+        this.props.setButtonSet()
     };
 
     render = (props) => {
@@ -13,11 +15,29 @@ class ButtonSet extends React.Component {
         return (
             <div className={styles.buttons}>
                 <button className={styles.button} disabled={disabledStartMax || isDisabledSet }
-                        onClick={this.buttonSet}>set
+                        onClick={this.buttonSet} >set
                 </button>
             </div>
         );
     }
 };
 
+const mapStateToProps = (state) => {
+  return {
+      startCount: state.counterSettingPage.startCount,
+      MaxCount: state.counterSettingPage.MaxCount,
+      isDisabledSet: state.counterSettingPage.isDisabledSet
+
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setButtonSet: () => {
+            dispatch(setDisabledSetAC())
+        }
+    }
+};
+
+const ButtonSet = connect(mapStateToProps, mapDispatchToProps)(buttonSet);
 export default ButtonSet;

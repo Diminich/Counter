@@ -90,19 +90,20 @@ class App extends React.Component {
         return (
             <div className='block'>
                 <div className='counterSetting'>
-                    <CounterSetting isDisabledSet={this.state.isDisabledSet} setButtonSet={this.setButtonSet}
-                                    maxCount={this.state.maxCount} startCount={this.state.startCount}
-                                    count={this.state.count} setNewMaxValue={this.setNewMaxValue}
-                                    setNewStartValue={this.setNewStartValue}/>
+                    <CounterSetting />
                 </div>
 
                 <div className='counter'>
-                    <Counter isErrorSet={this.state.isErrorSet} count={this.state.count} maxCount={this.state.maxCount}
-                             startCount={this.state.startCount} isDataSet={this.state.isDataSet}/>
-                    <Buttons isDisabledReset={this.state.isDisabledReset}
-                             isDisabledInc={this.state.isDisabledInc} isDisabledSet={this.state.isDisabledSet}
-                             setNewMaxValue={this.setNewMaxValue} addClick={this.addClick}
-                             addClickReset={this.addClickReset} state={this.state}/>
+                    <Counter
+                        // isErrorSet={this.state.isErrorSet} count={this.state.count} maxCount={this.state.maxCount}
+                        //      startCount={this.state.startCount} isDataSet={this.state.isDataSet}
+                    />
+                    <Buttons
+                        // isDisabledReset={this.state.isDisabledReset}
+                        //      isDisabledInc={this.state.isDisabledInc} isDisabledSet={this.state.isDisabledSet}
+                        //      setNewMaxValue={this.setNewMaxValue} addClick={this.addClick}
+                        //      addClickReset={this.addClickReset} state={this.state}
+                    />
                 </div>
             </div>
         );
