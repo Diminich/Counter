@@ -1,10 +1,8 @@
 import {combineReducers, createStore} from "redux";
 import counterSetting from "./CounterSetting-Reducer";
-import counterButtons from "./CounterButtons-Reducer";
 
 let reducer = combineReducers({
-        counterSettingPage: counterSetting,
-        counterButtonsPage: counterButtons
+        counterSettingPage: counterSetting
 });
 
 let store = createStore(reducer);
